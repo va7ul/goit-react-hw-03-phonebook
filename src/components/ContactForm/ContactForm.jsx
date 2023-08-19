@@ -10,7 +10,7 @@ export const ContactForm = ({ addContact }) => {
         number: '',
       }}
       onSubmit={(values, actions) => {
-        addContact({ ...values, id: nanoid() });
+        addContact({ id: nanoid(), ...values });
         actions.resetForm();
       }}
     >
